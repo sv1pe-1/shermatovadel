@@ -1,0 +1,516 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family:Roboto ;
+    src: url("../fonts/Roboto.ttf");
+}
+
+@font-face {
+    font-family:Roboto ;
+    src: url("../fonts/Robotobold.ttf");
+    font-weight: bold;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+}
+
+
+.header{
+    border: 1px solid #E5E5E5;
+    padding: 25px 0 ;
+    position: relative;
+}
+
+.container{
+    margin: 0 auto ;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    margin-left: 244px;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.logo img{
+    vertical-align: bottom;
+}
+
+.menu-item{
+    margin-right: 115px;
+}
+
+.menu-item a{
+    color: #030305;
+    font-size: 15px;
+    text-decoration: none;
+}
+.menu-item a:hover{
+    border-bottom: 2px solid #030305;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+.main{
+    background-image: url("../img/background.png");
+    background-position: center;
+    background-size: cover;
+    padding:  104px 0 154px 0;
+}
+.main-info{
+    max-width: 855px;
+}
+.main-title{
+    max-width: 855px;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 110%;
+    color: #030305;
+    margin-bottom: 40px;
+}
+.main-text{
+    max-width: 502px;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 40px;
+    color: #030305;
+}
+.button{
+    width: 334px;
+    height: 64px;
+    background: #030305;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 0;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: background-color .5s;
+}
+
+.button:hover{
+    background: #575757;
+    cursor: pointer;
+}
+
+.car{
+    padding: 100px 0 ;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: bold;
+    color: #030305;
+    line-height: 70px;
+}
+
+.car-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: space-between;
+}
+.cardsa {
+    display: flex;
+    margin-left: 13px;
+}
+.car-item{
+    max-width: 384px;
+    text-align: center;
+    margin-top: 40px;
+}
+.car-item-title{
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    line-height: 150%;
+    text-align: center;
+    color: #030305;
+    padding: 15px 0 17px 0;
+}
+.car-item-action{
+    margin-top: 13px;
+}
+
+.car-item-action .button{
+    padding: 15px;
+    height: 54px;
+    width: 100%;
+}
+.car-item-img:hover img{
+    transform: scale(1.1);
+}
+.car-item-img img{
+    vertical-align: bottom;
+    transition: all .3s;
+}
+
+.price{
+    position: relative;
+    padding-bottom: 121px;
+}
+.price .sub-title{
+    margin-bottom: 20px;
+}
+.price-text{
+    font-size: 16px;
+    line-height: 130%;
+    color: #5d5d5f;
+    margin-bottom: 60px;
+}
+.price-form{
+    max-width: 344px;
+}
+.price-input{
+    padding: 22px 10px;
+    width: 344px ;
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    border: 1px solid #5d5d5f;
+    font-size: 16px;
+    color: #000000;
+    outline: none;
+    box-sizing: border-box;
+}
+.price-input::placeholder{
+    color: #5d5d5f;
+}
+
+.price .button{
+    width: 100%;
+}
+.price-img{
+    position: absolute;
+    bottom: 0px;
+    left: 401px;
+}
+footer{
+    border-top: 1px solid #E5E5E5;
+    padding: 25px 0 ;
+}
+.footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right{
+    font-size: 15px;
+    color: #030305;
+}
+
+@keyframes slideIn{
+    from { transform: translateX(100%); opacity: 0;}
+    to{ transform: translateX(0); opacity: 1;}
+}
+
+.menu{
+    animation: slideIn 0.3s ease-out;
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 992px;
+    }
+    
+    .menu {
+        margin-left: 150px;
+    }
+    
+    .menu-item {
+        margin-right: 80px;
+    }
+    
+    .price-img {
+        left: 350px;
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 768px;
+    }
+    
+    .menu {
+        margin-left: 80px;
+    }
+    
+    .menu-item {
+        margin-right: 50px;
+    }
+    
+    .main-title {
+        font-size: 60px;
+    }
+    
+    .sub-title {
+        font-size: 50px;
+    }
+    
+    .price-img {
+        position: static;
+        display: block;
+        margin: 30px auto 0;
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 576px;
+    }
+    
+    .burger-menu {
+        display: block;
+    }
+    
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        margin-left: 0;
+        padding: 80px 20px 20px;
+    
+       
+       
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .menu-item {
+        margin: 0 0 20px 0;
+    }
+    
+    #menu-toggle:checked ~ .menu {
+        display: block;
+    }
+    
+    .main-title {
+        font-size: 48px;
+    }
+    
+    .sub-title {
+        font-size: 40px;
+    }
+    
+    .car-items {
+        justify-content: center;
+    }
+    
+    .car-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    .menu {
+        width: 80%;
+        right: 10px;
+        
+    }
+    
+    .main {
+        background-image: none;
+        padding: 50px 0;
+    }
+    
+    .main-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .main-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .button {
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+    }
+    
+    .sub-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    
+    .footer .container {
+        flex-direction: column;
+    }
+    
+    .footer .logo {
+        margin-bottom: 15px;
+    }
+}
+.price .container {
+    position: relative;
+    padding-bottom: 121px;
+}
+.price .sub-title{
+    margin-bottom: 20px;
+
+}
+.price-txt{
+    font-size: 16px;
+    line-height: 130%;
+    color: #5d5d5f;
+    margin-bottom: 60px;
+}
+.price-form{
+    width: 344px;
+}
+.price-input{
+    padding: 22px 18px;
+    width: 344px;
+    margin-bottom: 15px;
+    background: #ffff;
+    border: 1px solid #5D5D5F;
+    font-size: 16px;
+    color: #000000;
+    outline: none;
+    box-sizing: border-box;
+}
+.price-input::placeholder{
+    color: #5D5D5F;
+}
+.price .button{
+    width: 100%;
+}
+.priсe-img{
+    position: absolute;
+    bottom: 0px;
+    left: 401px;
+}
+.footer{
+    border-top: 1px solid #E5E5E5;
+    padding: 25px 0px;
+}
+.footer .container{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.rights{
+    font-size: 15px;
+    color: #030305;
+}
+.menu a{
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.menu a:hover {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Бургер-меню и крестик */
+#menu-toggle {
+    display: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    width: 30px;
+    height: 30px;
+}
+
+.burger-icon, .close-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.close-icon {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .burger-menu .burger-icon {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .burger-menu .close-icon {
+    opacity: 1;
+}
+
+/* Остальные существующие стили меню оставляем как есть */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    margin-left: 0;
+    padding: 80px 20px 20px;
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+#menu-toggle:checked ~ .menu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    
+    /* Остальные ваши медиазапросы остаются без изменений */
+}
